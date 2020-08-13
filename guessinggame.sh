@@ -3,8 +3,8 @@
 
 echo "Please enter the number of files (not directory) in the current directory only (not in subdirectory) [can be hidden too] "
 read n
-current_files=$(ls -ld *  | grep -v "^d" | wc -l)
-# current_files=$(ls -ld *  | grep  "^-" | wc -l)
+# current_files=$(ls -ld *  | grep -v "^d" | wc -l)
+current_files=$(ls -l | grep  "^-" | wc -l)
 
 while [[ $n -ne  $current_files ]];
 do 
